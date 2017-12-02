@@ -8,10 +8,12 @@
 #
 # Change this to specify a different handbrake preset. You can list them by running: "HandBrakeCLI --preset-list"
 #
-PRESET="iPhone & iPod Touch"
+PRESET="iPhone & iPod touch"
+
 if [ -z "$1" ] ; then
     TRANSCODEDIR="."
 else
     TRANSCODEDIR="$1"
 fi
-    find "$TRANSCODEDIR"/* -type f -exec bash -c 'HandBrakeCLI -i "$1" -o "${1%\.*}".mp4 --preset="$PRESET"' __ {} \;
+    #find "$TRANSCODEDIR"/* -type f -exec bash -c 'HandBrakeCLI -i "$1" -o "${1%\.*}".mp4 --preset="iPhone & iPod touch"' __ {} \;
+    find "$TRANSCODEDIR"/* -type f -exec bash -c 'HandBrakeCLI -i "$1" -o "${1%\.*}".mp4 --preset="iPhone & iPod touch"' __ {} \;
