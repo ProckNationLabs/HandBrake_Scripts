@@ -7,6 +7,7 @@
 # /Stargate/Season\ 2/Epiosde.avi
 # /Stargate/handbrake_folder.script
 # Outputs all Files back inside same dir's and does all folders inside Startgate DIR
+
 # /Stargate/Season\ 1/Epiosde.mp4
 # /Stargate/Season\ 2/Epiosde.mp4
 
@@ -21,4 +22,5 @@ TRANSCODEDIR="."
 else
 TRANSCODEDIR="$1"
 fi
+
 find "$TRANSCODEDIR"/* -type f -name "*.avi" -exec bash -c 'HandBrakeCLI -i "$1" -o "${1%\.*}".mp4 --preset="$PRESET"' __ {} \; && find . -name '*.avi' -exec rm -r     {} \;
