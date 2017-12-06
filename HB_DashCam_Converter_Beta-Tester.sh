@@ -44,10 +44,10 @@ fi
 #---------------------------------------------------------------------
 #  files and paths needed to run script from command line
 #
-#this folder has 2 subdirs and 3 avi files
+#   this folder has 2 subdirs and 3 avi files
 #	cd /media/jason/Backup2/VidConvert/DashCams/Black32GBSD/10-21-2017_Black/DCIM
 #	cd /media/jason/Backup2/VidConvert/DashCams
-
+#
 #	/home/jason/git_repositories/HandBrake_Scripts/HandbrakeProcessTreeGoodOneMaybe.sh
 
 
