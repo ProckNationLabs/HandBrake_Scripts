@@ -52,6 +52,21 @@
 #
 #----------------------------------------------------------------------
 
+#----------------------------------------------------------------------
+#
+#   Proposed changes:
+#
+#   1. Change find command to include a bash file instead of the 
+#      HandBrake command.
+#
+#   2. The batch file will have commands that will convert the video, 
+#      copy the file permissions, then delete the original source file.
+#
+#
+#----------------------------------------------------------------------
+
+
+
 # Change this to specify a different handbrake preset. You can list them by running: "HandBrakeCLI --preset-list"
 PRESET="iPhone & iPod touch"
 
