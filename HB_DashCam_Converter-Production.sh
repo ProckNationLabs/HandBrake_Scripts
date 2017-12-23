@@ -39,7 +39,7 @@ fi
     #find "$TRANSCODEDIR"/* -type f -exec bash -c 'HandBrakeCLI -i "$1" -o "${1%\.*}".mp4 --preset="iPhone & iPod touch"' __ {} \;
     
     
-     find "$TRANSCODEDIR"/* -type f -exec bash -c ' HandBrakeCLI -v -i "$1" -o "${1%\.*}".mp4 --preset="iPhone & iPod touch"' __ {} \;
+     find "$TRANSCODEDIR"/* -type f -exec bash -c ' echo "$1" -o "${1%\.*}".mp4 --preset="iPhone & iPod touch"' __ {} \;
 
 #---------------------------------------------------------------------
 #  files and paths needed to run script from command line
@@ -49,5 +49,5 @@ fi
 #	cd /media/jason/Backup2/VidConvert/DashCams
 
 #	/home/jason/git_repositories/HandBrake_Scripts/HandbrakeProcessTreeGoodOneMaybe.sh
-
+# I know I changed this
 
