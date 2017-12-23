@@ -78,18 +78,22 @@ fi
     #find "$TRANSCODEDIR"/* -type f -exec bash -c 'HandBrakeCLI -i "$1" -o "${1%\.*}".mp4 --preset="iPhone & iPod touch"' __ {} \;
     
     
-     find "$TRANSCODEDIR"/* -type f -exec bash -c ' HandBrakeCLI -v -i "$1" -o "${1%\.*}".mp4 --preset="iPhone & iPod touch"' __ {} \;
+     find "$TRANSCODEDIR"/* -type f -exec bash -c ' echo HandBrakeCLI -v -i "$1" -o "${1%\.*}".mp4 --preset="iPhone & iPod touch"' __ {} \;
 
 #---------------------------------------------------------------------
 #  files and paths needed to run script from command line
 #
-#   Location of files to be converted
-#   -Folder used for testing beta versions of the script
-#   --this folder has 2 subdirs and 3 avi files
-#   ---cd /media/jason/Backup2/VidConvert/DashCams/Black32GBSD/10-21-2017_Black/DCIM
-#   cd /media/jason/Backup2/VidConvert/DashCams
-#   
+#   Test locations of files to be converted
+#   -These folders used for testing beta versions of the script
+#	--/media/jason/Backup2/VidConvert/DashCams/Testers
+#	--This Testers location has multiple Test folder named Test1,Test2,...
+#	
+#	---The /media/jason/Backup2/VidConvert/DashCams/Testers/Test4 has 
+#	---1 avi file, 1 subdir and 2 avi files in that subdir
+#
 #   Location of script
-#   /home/jason/git_repositories/HandBrake_Scripts/HandbrakeProcessTreeGoodOneMaybe.sh
+#	/home/jason/git_repositories/HandBrake_Scripts/
+#	Location and name of script
+#   /home/jason/git_repositories/HandBrake_Scripts/HB_DashCam_Converter_Beta-Tester.sh
 
 
