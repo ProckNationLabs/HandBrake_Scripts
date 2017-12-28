@@ -78,14 +78,7 @@ fi
     #find "$TRANSCODEDIR"/* -type f -exec bash -c 'HandBrakeCLI -i "$1" -o "${1%\.*}".mp4 --preset="iPhone & iPod touch"' __ {} \;
     
     
-#     find "$TRANSCODEDIR"/* -type f -exec bash -c ' echo HandBrakeCLI -v -i "$1" -o "${1%\.*}".mp4 --preset="iPhone & iPod touch"' __ {} \;
-	find "$TRANSCODEDIR"/* -name *.AVI -type f -exec bash -c 'chmod --reference="$1" "${1%\.*}".mp4' __ {} \;
-
-#Original source -> find /path/to/dest/ -type f -print0 | xargs -O -I {} chmod --reference=/path/to/rfile.txt {}
-#Sourced from here -> https://www.cyberciti.biz/faq/how-to-copy-permissions-from-one-file-to-another-on-linux/
-#echo "$1"
-
-#find "$1" -type f -print0 | xargs -O -I {} chmod --reference=/path/to/rfile.txt {} 
+     find "$TRANSCODEDIR"/* -type f -exec bash -c ' echo HandBrakeCLI -v -i "$1" -o "${1%\.*}".mp4 --preset="iPhone & iPod touch"' __ {} \;
 
 #---------------------------------------------------------------------
 #  files and paths needed to run script from command line
@@ -97,9 +90,6 @@ fi
 #	
 #	---The /media/jason/Backup2/VidConvert/DashCams/Testers/Test4 has 
 #	---1 avi file, 1 subdir and 2 avi files in that subdir
-#
-#	Use /media/jason/Backup2/VidConvert/DashCams/Testers/Test5 for testing
-#	file permission cloning
 #
 #   Location of script
 #	/home/jason/git_repositories/HandBrake_Scripts/
