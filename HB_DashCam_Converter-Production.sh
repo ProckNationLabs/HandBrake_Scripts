@@ -42,6 +42,7 @@ find "$TRANSCODEDIR"/* -type f -exec bash -c 'HandBrakeCLI -i "$1" -o "${1%\.*}"
 
 ./HB_DashCam_Converter_Clone_Permissions.sh
 
+#./HB_DashCam_Converter_Remove_AVI.sh
 
 #---------------------------------------------------------------------
 #  files and paths needed to run script from command line
