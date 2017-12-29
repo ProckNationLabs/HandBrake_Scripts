@@ -58,5 +58,6 @@ find "$TRANSCODEDIR"/* -type f -exec bash -c 'HandBrakeCLI -i "$1" -o "${1%\.*}"
 
 #===========The next line will be the command that needs to be ran in the folder
 #===========that has the AVI files to convert. This is Production!!!============
-#   /home/jason/git_repositories/HandBrake_Scripts/HB_DashCam_Converter-Production.sh 
+#   /home/jason/git_repositories/HandBrake_Scripts/HB_DashCam_Converter-Production.sh or
+#   
 
