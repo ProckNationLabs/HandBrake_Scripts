@@ -36,10 +36,12 @@ if [ -z "$1" ] ; then
 else
     TRANSCODEDIR="$1"
 fi
-    #find "$TRANSCODEDIR"/* -type f -exec bash -c 'HandBrakeCLI -i "$1" -o "${1%\.*}".mp4 --preset="iPhone & iPod touch"' __ {} \;
-    
-    
-     find "$TRANSCODEDIR"/* -type f -exec bash -c ' echo "$1" -o "${1%\.*}".mp4 --preset="iPhone & iPod touch"' __ {} \;
+
+find "$TRANSCODEDIR"/* -type f -exec bash -c 'HandBrakeCLI -i "$1" -o "${1%\.*}".mp4 --preset="iPhone & iPod touch"' __ {} \;
+#find "$TRANSCODEDIR"/* -type f -exec bash -c ' echo "$1" -o "${1%\.*}".mp4 --preset="iPhone & iPod touch"' __ {} \;
+
+./HB_DashCam_Converter_Clone_Permissions.sh
+
 
 #---------------------------------------------------------------------
 #  files and paths needed to run script from command line
@@ -49,5 +51,11 @@ fi
 #	cd /media/jason/Backup2/VidConvert/DashCams
 
 #	/home/jason/git_repositories/HandBrake_Scripts/HandbrakeProcessTreeGoodOneMaybe.sh
-# I know I changed this
+
+#   /media/jason/Backup2/VidConvert/DashCams/Testers/
+#   Subdirs are Test1 - Test4. Test5 is for testing file permissions only.
+
+#===========The next line will be the command that needs to be ran in the folder
+#===========that has the AVI files to convert. This is Production!!!============
+#   /home/jason/git_repositories/HandBrake_Scripts/HB_DashCam_Converter-Production.sh 
 
