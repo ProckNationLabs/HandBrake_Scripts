@@ -55,7 +55,7 @@
 # use the line bellow to run script.  Execute the script bellow in the folder that has the AVI files to delete.
 # /home/jason/git_repositories/HandBrake_Scripts/HB_DashCam_Converter_Remove_AVI.sh
 
-
+#echo 'Starting HB_DashCam_Converter_Remove_AVI.sh'
 
 if [ -z "$1" ] ; then
     TRANSCODEDIR="."
@@ -70,5 +70,7 @@ fi
 #Original source -> find /path/to/dest/ -type f -print0 | xargs -O -I {} chmod --reference=/path/to/rfile.txt {}
 #Sourced from here -> https://www.cyberciti.biz/faq/how-to-copy-permissions-from-one-file-to-another-on-linux/
 
+#echo 'Finished HB_DashCam_Converter_Remove_AVI.sh'
 
+echo $?
 

@@ -28,6 +28,12 @@
 #
 #----------------------------------------------------------------------
 
+# varibles for file and folder locations for mv routine
+MVHBDEST="/media/jason/Backup2/VidConvert/DashCams/Black32GBSD/New_Vids/01-10-2018_to_01-12-2018/"
+MVSDSOURCE="/media/jason/SD_VOL/DCIM"
+
+
+
 # Change this to specify a different handbrake preset. You can list them by running: "HandBrakeCLI --preset-list"
 PRESET="iPhone & iPod touch"
 
