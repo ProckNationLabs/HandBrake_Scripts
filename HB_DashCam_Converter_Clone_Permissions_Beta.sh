@@ -54,10 +54,10 @@
 
 #command to run this script: /home/jason/git_repositories/HandBrake_Scripts/HB_DashCam_Converter_Clone_Permissions_Beta.sh
 
-
-
+logger --id=$$ --tag DashCamConverter -p local5.notice Started running the DashCam Converter Permisson Cloner
 echo
 echo 'Starting Clone Permissions Script'
+date
 echo
 
 if [ -z "$1" ] ; then
@@ -70,8 +70,9 @@ find "$TRANSCODEDIR"/* -name *.AVI -type f -exec bash -c '/home/jason/git_reposi
 
 echo
 echo 'Finished Clone Permissions Script'
+date
 echo
-
+logger --id=$$ --tag DashCamConverter -p local5.notice Finnished running the DashCam Converter Permisson Cloner
 #Original source -> find /path/to/dest/ -type f -print0 | xargs -O -I {} chmod --reference=/path/to/rfile.txt {}
 #Sourced from here -> https://www.cyberciti.biz/faq/how-to-copy-permissions-from-one-file-to-another-on-linux/
 
