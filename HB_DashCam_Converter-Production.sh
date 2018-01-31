@@ -45,9 +45,14 @@ fi
 
 find "$TRANSCODEDIR"/* -type f -exec bash -c 'HandBrakeCLI -i "$1" -o "${1%\.*}".mp4 --preset="iPhone & iPod touch"' __ {} \;
 #find "$TRANSCODEDIR"/* -type f -exec bash -c ' echo "$1" -o "${1%\.*}".mp4 --preset="iPhone & iPod touch"' __ {} \;
-
+echo
+echo 'Opening Clone Permissions Script'
+echo
 /home/jason/git_repositories/HandBrake_Scripts/HB_DashCam_Converter_Clone_Permissions.sh
 
+echo
+echo 'Opening Batch Remove AVI Script'
+echo date
 /home/jason/git_repositories/HandBrake_Scripts/HB_DashCam_Converter_Remove_AVI.sh
 
 #---------------------------------------------------------------------

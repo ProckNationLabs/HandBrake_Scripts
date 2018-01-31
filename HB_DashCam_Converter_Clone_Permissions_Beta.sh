@@ -52,12 +52,24 @@
 #
 #----------------------------------------------------------------------
 
-#command to run this script: /home/jason/git_repositories/HandBrake_Scripts/HB_DashCam_Converter_Clone_Permissions_Worker.sh
+#command to run this script: /home/jason/git_repositories/HandBrake_Scripts/HB_DashCam_Converter_Clone_Permissions_Beta.sh
+
+
 
 echo
-echo Starting to clone permissions from "$1" to "${1%\.*}".mp4
-chmod --reference="$1" "${1%\.*}".mp4
-echo Finished cloning permissions from "$1" to "${1%\.*}".mp4 with exit code of "$?"
+echo 'Starting Clone Permissions Script'
+echo
+
+if [ -z "$1" ] ; then
+    TRANSCODEDIR="."
+else
+    TRANSCODEDIR="$1"
+fi
+#Original line: find "$TRANSCODEDIR"/* -name *.AVI -type f -exec bash -c 'chmod --reference="$1" "${1%\.*}".mp4' __ {} \;
+find "$TRANSCODEDIR"/* -name *.AVI -type f -exec bash -c '/home/jason/git_repositories/HandBrake_Scripts/HB_DashCam_Converter_Clone_Permissions_Worker.sh "$1"' __ {} \;
+
+echo
+echo 'Finished Clone Permissions Script'
 echo
 
 #Original source -> find /path/to/dest/ -type f -print0 | xargs -O -I {} chmod --reference=/path/to/rfile.txt {}
