@@ -35,7 +35,7 @@ MVSDSOURCE="/media/jason/SD_VOL/DCIM"
 #syslog loggin example: logger -p local0.notice -t SensorOutPutTest -f ~/sensors.txt
 
 #start of first syslog message
-logger --id=$$ --tag DashCamConverter -p local5.info Starting the DashCam Converter Production version
+logger --id=$$ --tag DashCamConverter -p local5.info Starting the DashCam Converter Production v1
 
 # Change this to specify a different handbrake preset. You can list them by running: "HandBrakeCLI --preset-list"
 PRESET="iPhone & iPod touch"
@@ -63,7 +63,7 @@ echo 'Opening Batch Remove AVI Script'
 date
 /home/jason/git_repositories/HandBrake_Scripts/HB_DashCam_Converter_Remove_AVI.sh
 
-logger --id=$$ --tag DashCamConverter -p local5.info Finished running the DashCam Converter Production version
+logger --id=$$ --tag DashCamConverter -p local5.info Finished running the DashCam Converter Production v1
 
 #---------------------------------------------------------------------
 #  files and paths needed to run script from command line
@@ -81,6 +81,6 @@ logger --id=$$ --tag DashCamConverter -p local5.info Finished running the DashCa
 
 #===========The next line will be the command that needs to be ran in the folder
 #===========that has the AVI files to convert. This is Production!!!============
-#   /home/jason/git_repositories/HandBrake_Scripts/HB_DashCam_Converter-Production.sh or
+#   /home/jason/git_repositories/HandBrake_Scripts/HB_DashCam_Converter-Production_v1.sh or
 #   /home/jason/git_repositories/HandBrake_Scripts/HB_DashCam_Converter_Clone_Permissions.sh
 
