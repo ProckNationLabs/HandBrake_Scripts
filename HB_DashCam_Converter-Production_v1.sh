@@ -49,6 +49,13 @@ fi
 echo
 echo Starting the DashCam Converter, Production version, Script at the following date/time:
 date
+
+# start the script to change the filenames to the file creation date and time
+echo
+echo
+/home/jason/git_repositories/HandBrake_Scripts/HB_DashCam_Converter_Rename_Create_Date.sh
+
+echo Starting to re-encode files to "$PRESET"
 echo
 find "$TRANSCODEDIR"/* -type f -exec bash -c 'HandBrakeCLI -i "$1" -o "${1%\.*}".mp4 --preset="iPhone & iPod touch"' __ {} \;
 #find "$TRANSCODEDIR"/* -type f -exec bash -c ' echo "$1" -o "${1%\.*}".mp4 --preset="iPhone & iPod touch"' __ {} \;

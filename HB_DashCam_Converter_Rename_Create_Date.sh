@@ -12,24 +12,22 @@
 
 #/media/jason/Backup2/VidConvert/DashCams/Testers/Test6/10180210/09270168.AVI
 
-find "$TRANSCODEDIR"/* -name *.AVI -type f -exec bash -c '/home/jason/git_repositories/HandBrake_Scripts/HB_DashCam_Converter_Rename_Create_Date.sh "$1"' __ {} \;
+logger --id=$$ --tag DashCamConverter -p local5.notice Started running the DashCam Converter File Renaming Script
+echo
+echo 'Starting File Renaming Script'
+date
+echo
 
-ModDate=$(exiftool -FileModifyDate -s3 "$1")
-ModDate=${ModDate/:/-}
-ModDate=${ModDate/:/-}
-ModDate=${ModDate/-06/' -12'}
-ModDate2=$(date --date="$ModDate" +%Y-%m-%d_%H-%M-%S)
-filename=DashCam_${ModDate2}.AVI
-#echo $filename
-rootname=$(basename $1)
+if [ -z "$1" ] ; then
+    TRANSCODEDIR="."
+else
+    TRANSCODEDIR="$1"
+fi
+
+find "$TRANSCODEDIR"/* -name *.AVI -type f -exec bash -c '/home/jason/git_repositories/HandBrake_Scripts/HB_DashCam_Converter_Rename_Create_Date_Worker.sh "$1"' __ {} \;
+
 echo
-#echo $1
-#echo $rootname
-#echo
-fullfilename=${1%$rootname}$filename
-#echo $fullfilename
-#echo
-echo Renaming $1 to $fullfilename
-mv -T $1 $fullfilename
-echo Exit code $?
+echo 'Finished File Renaming Script'
+date
 echo
+logger --id=$$ --tag DashCamConverter -p local5.notice Finnished running the DashCam Converter File Renaming Script Exit code $?
